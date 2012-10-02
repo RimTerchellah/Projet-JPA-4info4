@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+	<persistence-unit name="PU" transaction-type="RESOURCE_LOCAL">
+		<!-- provider -->
+		<provider>oracle.toplink.essentials.PersistenceProvider</provider>
+		<class>model.oneToManyUni.G</class>
+		<class>model.oneToManyUni.H</class>
+		<class>model.oneToOneUni.D</class>
+		<class>model.manyToManyWithoutData.Immo</class>
+		<class>model.manyToManyWithoutData.Jardin</class>
+		<class>tn.esprit.f1LifeTiming.entities.Race</class>
+		<class>model.oneToOneUni.C</class>
+		<class>tn.esprit.f1LifeTiming.entities.Car</class>
+		<class>model.oneToOneBi.B</class>
+		<class>model.oneToManyBi.E</class>
+		<class>model.oneToOneBi.A</class>
+		<class>model.oneToManyBi.F</class>
+
+
+		<properties>
+			<!-- connexion JDBC -->
+			<property name="toplink.jdbc.driver" value="com.mysql.jdbc.Driver" />
+			<property name="toplink.jdbc.url" value="jdbc:mysql://localhost:3306/jpaBase" />
+			<property name="toplink.jdbc.user" value="root" />
+			<property name="toplink.jdbc.password" value="root" />
+			<!-- SGBD -->
+			<property name="toplink.target-database" value="MySQL4" />
+			<property name="toplink.ddl-generation" value="drop-and-create-tables" />
+			<property name="toplink.application-location"
+				value="E:\WorkJEE\JEE6ToolsEsprit\Workspace\jpaProjects\tn.esprit.f1LifeTiming" />
+			<property name="toplink.create-ddl-jdbc-file-name" value="sql\create.sql" />
+			<property name="toplink.drop-ddl-jdbc-file-name" value="sql\drop.sql" />
+			<property name="toplink.ddl-generation.output-mode" value="both" />
+			<!-- logs -->
+			<property name="toplink.logging.level" value="FINE" />
+		</properties>
+	</persistence-unit>
+
+</persistence>
